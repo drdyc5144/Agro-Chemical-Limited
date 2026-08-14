@@ -9,7 +9,7 @@ export const products = [
     shortDescription: "Effective broad-spectrum weed control for major crops",
     fullDescription:
       "AgroShield Herbicide provides comprehensive weed management for maize, rice, and wheat crops. It controls both broadleaf and grassy weeds with excellent crop safety.",
-    images: ["/images/products/herbicide-1.jpg"],
+    images: ["https://i.postimg.cc/85Vvjksz/agro.jpg"],
     specifications: {
       packSize: "1L, 5L, 20L",
       formulation: "Suspension Concentrate (SC)",
@@ -34,7 +34,7 @@ export const products = [
       "Broad-spectrum insect control for vegetable and fruit crops",
     fullDescription:
       "CropGuard Insecticide offers effective control against major insect pests affecting vegetables, fruits, and field crops. Provides long-lasting protection with minimal environmental impact.",
-    images: ["/images/products/insecticide-1.jpg"],
+    images: ["https://i.postimg.cc/LskXQt6Y/gang.jpg"],
     specifications: {
       packSize: "100ml, 500ml, 1L",
       formulation: "Emulsifiable Concentrate (EC)",
@@ -59,7 +59,7 @@ export const products = [
       "Preventive and curative fungicide for disease management",
     fullDescription:
       "FungoMax Fungicide provides broad-spectrum disease control for various crops. Effective against major fungal diseases with both preventive and curative action.",
-    images: ["/images/products/fungicide-1.jpg"],
+    images: ["https://i.postimg.cc/CM78xg0x/fung.jpg"],
     specifications: {
       packSize: "250ml, 1L, 5L",
       formulation: "Suspension Concentrate (SC)",
@@ -83,7 +83,7 @@ export const products = [
     shortDescription: "Balanced NPK fertilizer for optimal crop growth",
     fullDescription:
       "NitroGrow Fertilizer provides essential nutrients for healthy crop development and maximum yield. Formulated for balanced nutrition throughout the growing season.",
-    images: ["/images/products/fertilizer-1.jpg"],
+    images: ["https://i.postimg.cc/FH3s1ycm/fer.jpg"],
     specifications: {
       packSize: "50kg, 100kg, Bulk",
       formulation: "Granular",
@@ -107,7 +107,7 @@ export const products = [
     shortDescription: "Enhances effectiveness of crop protection products",
     fullDescription:
       "CropShield Adjuvant improves the performance of herbicides, insecticides, and fungicides. Enhances spreading, wetting, and penetration for better results.",
-    images: ["/images/products/adjuvant-1.jpg"],
+    images: ["https://i.postimg.cc/L5JmSLRP/crop.jpg"],
     specifications: {
       packSize: "250ml, 1L, 5L",
       formulation: "Liquid",
@@ -131,7 +131,7 @@ export const products = [
     shortDescription: "Advanced weed control for tough weed species",
     fullDescription:
       "AgroShield Plus Herbicide provides enhanced control of difficult weed species. Formulated for optimal performance under challenging conditions.",
-    images: ["/images/products/herbicide-2.jpg"],
+    images: ["https://i.postimg.cc/kgQq7n3C/Agro-Shield-Plus-Herbicide.jpg"],
     specifications: {
       packSize: "1L, 5L, 20L",
       formulation: "Suspension Concentrate (SC)",
