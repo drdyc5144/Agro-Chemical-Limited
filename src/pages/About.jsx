@@ -55,12 +55,15 @@ const About = () => {
           </div>
           <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 h-64 flex items-center justify-center">
             <div className="text-center">
-              <div className="text-6xl mb-4">🌾</div>
+              <div className="text-6xl mb-4">📍</div>
               <p className="text-xl font-semibold text-primary-700">
-                Founded {companyInfo.founded}
+                Based in Shendam
               </p>
               <p className="text-text-secondary">
-                Trusted by farmers across Nigeria
+                Poediel, Plateau State, Nigeria
+              </p>
+              <p className="text-sm text-text-muted mt-2">
+                Serving farmers nationwide
               </p>
             </div>
           </div>

@@ -1,11 +1,11 @@
 export const COMPANY = {
-  name: import.meta.env.VITE_COMPANY_NAME || 'Shadow Agro Chemical Limited',
+  name: 'Shadow Agro Chemical Limited',
   shortName: 'Shadow Agro',
-  phone: import.meta.env.VITE_PHONE || '+2348000000000',
-  whatsapp: import.meta.env.VITE_WHATSAPP || '2348000000000',
-  email: import.meta.env.VITE_EMAIL || 'info@shadowagro.com',
-  address: import.meta.env.VITE_ADDRESS || '123 Agricultural Road, Lagos, Nigeria',
-  businessHours: import.meta.env.VITE_BUSINESS_HOURS || 'Monday - Friday: 8:00 AM - 6:00 PM',
+  phone: '07071340780',
+  whatsapp: '2349060796189',
+  email: 'Yongkotnanep19@gmail.com',
+  address: 'Poediel, Shendam Local Government, Plateau State, Nigeria',
+  businessHours: 'Monday - Friday: 8:00 AM - 6:00 PM',
 }
 
 export const WHATSAPP_NUMBER = COMPANY.whatsapp

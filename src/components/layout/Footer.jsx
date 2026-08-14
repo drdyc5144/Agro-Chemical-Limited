@@ -26,7 +26,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">Shadow Agro</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               Trusted supplier of quality agricultural inputs and agrochemical
-              products for farmers and agricultural businesses.
+              products for farmers and agricultural businesses across Nigeria.
             </p>
             <div className="flex space-x-4 mt-6">
               <a
@@ -155,29 +155,60 @@ const Footer = () => {
                   size={18}
                   className="text-accent-500 mt-1 flex-shrink-0"
                 />
-                <span className="text-sm text-gray-300">{COMPANY.phone}</span>
+                <div>
+                  <span className="text-sm text-gray-300 block">Call Us</span>
+                  <a
+                    href="tel:07071340780"
+                    className="text-sm text-white hover:text-accent-500 transition-colors"
+                  >
+                    0707 134 0780
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <FaWhatsapp
+                  size={18}
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <div>
+                  <span className="text-sm text-gray-300 block">WhatsApp</span>
+                  <a
+                    href="https://wa.me/2349060796189"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white hover:text-green-500 transition-colors"
+                  >
+                    0906 079 6189
+                  </a>
+                </div>
               </div>
               <div className="flex items-start space-x-3">
                 <FaEnvelope
                   size={18}
                   className="text-accent-500 mt-1 flex-shrink-0"
                 />
-                <span className="text-sm text-gray-300">{COMPANY.email}</span>
+                <div>
+                  <span className="text-sm text-gray-300 block">Email</span>
+                  <a
+                    href="mailto:Yongkotnanep19@gmail.com"
+                    className="text-sm text-white hover:text-accent-500 transition-colors break-all"
+                  >
+                    Yongkotnanep19@gmail.com
+                  </a>
+                </div>
               </div>
               <div className="flex items-start space-x-3">
                 <FaMapMarkerAlt
                   size={18}
                   className="text-accent-500 mt-1 flex-shrink-0"
                 />
-                <span className="text-sm text-gray-300">{COMPANY.address}</span>
+                <div>
+                  <span className="text-sm text-gray-300 block">Address</span>
+                  <span className="text-sm text-white">
+                    Poediel, Shendam Local Government, Plateau State, Nigeria
+                  </span>
+                </div>
               </div>
-              <button
-                onClick={sendWhatsAppMessage}
-                className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm"
-              >
-                <FaWhatsapp size={16} />
-                Chat on WhatsApp
-              </button>
             </div>
           </div>
         </div>

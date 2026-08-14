@@ -1,10 +1,11 @@
 export const companyInfo = {
   name: "Shadow Agro Chemical Limited",
   founded: "2020",
+  location: "Poediel, Shendam Local Government, Plateau State, Nigeria",
   mission:
     "To provide high-quality agricultural inputs and agrochemical solutions that empower farmers and agricultural businesses to achieve optimal productivity and sustainable growth.",
   vision:
-    "To be the most trusted and reliable agrochemical partner in Africa, driving agricultural transformation through quality products and expert support.",
+    "To be the most trusted and reliable agrochemical partner in Nigeria and across Africa, driving agricultural transformation through quality products and expert support.",
   values: [
     {
       title: "Quality First",
