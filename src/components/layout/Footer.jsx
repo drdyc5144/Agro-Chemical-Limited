@@ -21,9 +21,16 @@ const Footer = () => {
     <footer className="bg-secondary-900 text-white">
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
+          {/* Company Info with Logo */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Shadow Agro</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="https://i.postimg.cc/yxVNCw5S/Shadow.png"
+                alt="Shadow Agro Chemical Limited"
+                className="h-12 w-auto object-contain"
+              />
+              <span className="text-xl font-bold">Shadow Agro</span>
+            </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Trusted supplier of quality agricultural inputs and agrochemical
               products for farmers and agricultural businesses across Nigeria.

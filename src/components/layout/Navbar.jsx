@@ -46,25 +46,25 @@ const Navbar = () => {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
   // Close menu on escape key
   useEffect(() => {
     const handleEsc = (event) => {
-      if (event.key === 'Escape' && isOpen) {
+      if (event.key === "Escape" && isOpen) {
         setIsOpen(false);
       }
     };
-    document.addEventListener('keydown', handleEsc);
+    document.addEventListener("keydown", handleEsc);
     return () => {
-      document.removeEventListener('keydown', handleEsc);
+      document.removeEventListener("keydown", handleEsc);
     };
   }, [isOpen]);
 
@@ -80,13 +80,15 @@ const Navbar = () => {
       >
         <div className="container-custom">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary-700">
+            {/* Logo with Image */}
+            <Link to="/" className="flex items-center space-x-3">
+              <img
+                src="https://i.postimg.cc/yxVNCw5S/Shadow.png"
+                alt="Shadow Agro Chemical Limited"
+                className="h-12 w-auto object-contain"
+              />
+              <span className="text-xl font-bold text-primary-700 hidden sm:block">
                 Shadow Agro
-              </span>
-              <span className="text-sm text-secondary-700 font-medium hidden sm:inline">
-                Chemical Limited
               </span>
             </Link>
 
@@ -121,7 +123,11 @@ const Navbar = () => {
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? <FaTimes size={28} className="text-primary-700" /> : <HiMenu size={28} className="text-primary-700" />}
+              {isOpen ? (
+                <FaTimes size={28} className="text-primary-700" />
+              ) : (
+                <HiMenu size={28} className="text-primary-700" />
+              )}
             </button>
           </div>
         </div>
@@ -131,13 +137,15 @@ const Navbar = () => {
       <div
         ref={menuRef}
         className={`fixed left-0 right-0 z-40 bg-white shadow-2xl transform transition-all duration-300 ease-in-out lg:hidden ${
-          isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+          isOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0 pointer-events-none"
         }`}
-        style={{ 
-          top: '72px',
-          backgroundColor: 'white',
-          borderRadius: '0 0 20px 20px',
-          overflow: 'hidden'
+        style={{
+          top: "72px",
+          backgroundColor: "white",
+          borderRadius: "0 0 20px 20px",
+          overflow: "hidden",
         }}
       >
         <div className="flex flex-col p-6 space-y-3">
@@ -162,7 +170,7 @@ const Navbar = () => {
       {isOpen && (
         <div
           className="fixed inset-0 z-30 lg:hidden"
-          style={{ top: '72px', backgroundColor: 'rgba(0,0,0,0.3)' }}
+          style={{ top: "72px", backgroundColor: "rgba(0,0,0,0.3)" }}
           onClick={() => setIsOpen(false)}
         />
       )}
