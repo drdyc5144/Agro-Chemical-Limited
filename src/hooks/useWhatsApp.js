@@ -15,7 +15,14 @@ export const useWhatsApp = (defaultProduct = null) => {
     (product = defaultProduct) => {
       const message = encodeURIComponent(WHATSAPP_MESSAGE(product));
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
+      // Open WhatsApp in a new tab/window
       window.open(url, "_blank");
+
+      // Small delay to ensure the page stays responsive
+      setTimeout(() => {
+        // Optional: Add a small visual feedback
+      }, 100);
     },
     [defaultProduct],
   );
