@@ -7,6 +7,7 @@ import {
   FaHandshake,
   FaLightbulb,
 } from "react-icons/fa";
+import { MdOutlineShareLocation } from "react-icons/md";
 import Container from "../components/ui/Container";
 import SectionHeading from "../components/ui/SectionHeading";
 import { companyInfo } from "../data/company";
@@ -55,7 +56,13 @@ const About = () => {
           </div>
           <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 h-64 flex items-center justify-center">
             <div className="text-center">
-              <div className="text-6xl mb-4">📍</div>
+              {/* Location Icon - Centered and properly sized */}
+              <div className="flex justify-center mb-3">
+                <MdOutlineShareLocation 
+                  className="text-primary-700" 
+                  size={48} 
+                />
+              </div>
               <p className="text-xl font-semibold text-primary-700">
                 Based in Shendam
               </p>

@@ -29,7 +29,7 @@ const Footer = () => {
                 alt="Shadow Agro Chemical Limited"
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-xl font-bold">Shadow Agro</span>
+              <span className="text-xl font-bold text-white">Shadow Agro</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Trusted supplier of quality agricultural inputs and agrochemical
@@ -69,7 +69,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -108,7 +110,9 @@ const Footer = () => {
 
           {/* Product Categories */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Product Categories</h4>
+            <h4 className="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">
+              Product Categories
+            </h4>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -155,7 +159,9 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <h4 className="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">
+              Contact Us
+            </h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <FaPhone
@@ -163,7 +169,7 @@ const Footer = () => {
                   className="text-accent-500 mt-1 flex-shrink-0"
                 />
                 <div>
-                  <span className="text-sm text-gray-300 block">Call Us</span>
+                  <span className="text-sm text-gray-400 block">Call Us</span>
                   <a
                     href="tel:07071340780"
                     className="text-sm text-white hover:text-accent-500 transition-colors"
@@ -178,7 +184,7 @@ const Footer = () => {
                   className="text-green-500 mt-1 flex-shrink-0"
                 />
                 <div>
-                  <span className="text-sm text-gray-300 block">WhatsApp</span>
+                  <span className="text-sm text-gray-400 block">WhatsApp</span>
                   <a
                     href="https://wa.me/2349060796189"
                     target="_blank"
@@ -195,7 +201,7 @@ const Footer = () => {
                   className="text-accent-500 mt-1 flex-shrink-0"
                 />
                 <div>
-                  <span className="text-sm text-gray-300 block">Email</span>
+                  <span className="text-sm text-gray-400 block">Email</span>
                   <a
                     href="mailto:Yongkotnanep19@gmail.com"
                     className="text-sm text-white hover:text-accent-500 transition-colors break-all"
@@ -210,7 +216,7 @@ const Footer = () => {
                   className="text-accent-500 mt-1 flex-shrink-0"
                 />
                 <div>
-                  <span className="text-sm text-gray-300 block">Address</span>
+                  <span className="text-sm text-gray-400 block">Address</span>
                   <span className="text-sm text-white">
                     Poediel, Shendam Local Government, Plateau State, Nigeria
                   </span>
