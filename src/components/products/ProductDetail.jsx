@@ -99,7 +99,20 @@ const ProductDetail = () => {
             {product.featured && <Badge variant="accent">Featured</Badge>}
           </div>
 
-          <h1 className="heading-2 mb-4">{product.name}</h1>
+          <h1 className="heading-2 mb-2">{product.name}</h1>
+
+          {/* Price Section */}
+          <div className="mb-4">
+            <span className="text-3xl font-bold text-primary-700">
+              {product.price}
+            </span>
+            {product.pricePerUnit && (
+              <span className="text-lg text-text-muted ml-1">
+                /{product.pricePerUnit}
+              </span>
+            )}
+          </div>
+
           <p className="body-large mb-6">{product.shortDescription}</p>
 
           {/* Key Specs */}
@@ -132,7 +145,7 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Only Order Now */}
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => sendWhatsAppMessage(product)}
@@ -141,15 +154,12 @@ const ProductDetail = () => {
               <FaWhatsapp size={24} />
               Order Now
             </button>
-            <button className="flex-1 bg-primary-700 hover:bg-primary-800 text-white px-8 py-4 rounded-xl font-semibold transition-colors text-lg">
-              Request Information
-            </button>
           </div>
 
           {/* Product Note */}
           <p className="text-xs text-text-muted mt-4">
-            * For detailed application rates and safety information, please
-            contact our team.
+            * Prices are subject to change. For bulk orders and delivery
+            options, please contact our team.
           </p>
         </div>
       </div>

@@ -4,6 +4,8 @@ export const products = [
     name: "AgroShield Herbicide",
     slug: "agroshield-herbicide",
     category: "Herbicides",
+    price: "₦8,500",
+    pricePerUnit: "per litre",
     shortDescription: "Effective broad-spectrum weed control for major crops",
     fullDescription:
       "AgroShield Herbicide provides comprehensive weed management for maize, rice, and wheat crops. It controls both broadleaf and grassy weeds with excellent crop safety.",
@@ -19,13 +21,15 @@ export const products = [
       "Application information will be provided by the manufacturer.",
     safetyInfo: "Safety information will be provided by the manufacturer.",
     featured: true,
-    availability: "Available",
+    availability: "In Stock",
   },
   {
     id: "prod-002",
     name: "CropGuard Insecticide",
     slug: "cropguard-insecticide",
     category: "Insecticides",
+    price: "₦12,000",
+    pricePerUnit: "per litre",
     shortDescription:
       "Broad-spectrum insect control for vegetable and fruit crops",
     fullDescription:
@@ -42,13 +46,15 @@ export const products = [
       "Application information will be provided by the manufacturer.",
     safetyInfo: "Safety information will be provided by the manufacturer.",
     featured: true,
-    availability: "Available",
+    availability: "In Stock",
   },
   {
     id: "prod-003",
     name: "FungoMax Fungicide",
     slug: "fungomax-fungicide",
     category: "Fungicides",
+    price: "₦15,000",
+    pricePerUnit: "per litre",
     shortDescription:
       "Preventive and curative fungicide for disease management",
     fullDescription:
@@ -65,13 +71,15 @@ export const products = [
       "Application information will be provided by the manufacturer.",
     safetyInfo: "Safety information will be provided by the manufacturer.",
     featured: false,
-    availability: "Available",
+    availability: "In Stock",
   },
   {
     id: "prod-004",
     name: "NitroGrow Fertilizer",
     slug: "nitrogrow-fertilizer",
     category: "Fertilizers",
+    price: "₦45,000",
+    pricePerUnit: "per 50kg bag",
     shortDescription: "Balanced NPK fertilizer for optimal crop growth",
     fullDescription:
       "NitroGrow Fertilizer provides essential nutrients for healthy crop development and maximum yield. Formulated for balanced nutrition throughout the growing season.",
@@ -87,13 +95,15 @@ export const products = [
       "Application information will be provided by the manufacturer.",
     safetyInfo: "Safety information will be provided by the manufacturer.",
     featured: true,
-    availability: "Available",
+    availability: "In Stock",
   },
   {
     id: "prod-005",
     name: "CropShield Adjuvant",
     slug: "cropshield-adjuvant",
     category: "Adjuvants",
+    price: "₦6,500",
+    pricePerUnit: "per litre",
     shortDescription: "Enhances effectiveness of crop protection products",
     fullDescription:
       "CropShield Adjuvant improves the performance of herbicides, insecticides, and fungicides. Enhances spreading, wetting, and penetration for better results.",
@@ -109,13 +119,15 @@ export const products = [
       "Application information will be provided by the manufacturer.",
     safetyInfo: "Safety information will be provided by the manufacturer.",
     featured: false,
-    availability: "Available",
+    availability: "In Stock",
   },
   {
     id: "prod-006",
     name: "AgroShield Plus Herbicide",
     slug: "agroshield-plus-herbicide",
     category: "Herbicides",
+    price: "₦11,000",
+    pricePerUnit: "per litre",
     shortDescription: "Advanced weed control for tough weed species",
     fullDescription:
       "AgroShield Plus Herbicide provides enhanced control of difficult weed species. Formulated for optimal performance under challenging conditions.",
@@ -131,7 +143,7 @@ export const products = [
       "Application information will be provided by the manufacturer.",
     safetyInfo: "Safety information will be provided by the manufacturer.",
     featured: false,
-    availability: "Available",
+    availability: "In Stock",
   },
 ];
 

@@ -12,14 +12,23 @@ export const WHATSAPP_NUMBER = COMPANY.whatsapp;
 
 export const WHATSAPP_MESSAGE = (product = null) => {
   if (product) {
-    // Build a detailed product inquiry message
+    // Build a detailed product inquiry message with price
     let message = `Hello Shadow Agro Chemical Limited,\n\n`;
     message += `I would like to place an order for the following product:\n\n`;
     message += `📦 Product: ${product.name}\n`;
     message += `📂 Category: ${product.category}\n`;
 
+    // Add price if available
+    if (product.price) {
+      message += `💰 Price: ${product.price}`;
+      if (product.pricePerUnit) {
+        message += ` / ${product.pricePerUnit}`;
+      }
+      message += `\n`;
+    }
+
     if (product.specifications?.packSize) {
-      message += `📏 Pack Size: ${product.specifications.packSize}\n`;
+      message += `📏 Available Sizes: ${product.specifications.packSize}\n`;
     }
 
     if (product.specifications?.formulation) {
