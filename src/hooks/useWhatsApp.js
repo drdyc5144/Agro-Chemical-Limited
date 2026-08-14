@@ -15,7 +15,9 @@ export const useWhatsApp = (defaultProduct = null) => {
     (product = defaultProduct) => {
       const message = encodeURIComponent(WHATSAPP_MESSAGE(product));
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-      window.open(url, "_blank");
+
+      // Use window.location.href instead of window.open to keep tab active
+      window.location.href = url;
     },
     [defaultProduct],
   );
