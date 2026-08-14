@@ -16,7 +16,6 @@ const ProductDetail = () => {
   const { slug } = useParams();
   const product = getProductBySlug(slug);
   const [activeTab, setActiveTab] = useState("description");
-  const [isLoading, setIsLoading] = useState(false);
   const { sendWhatsAppMessage } = useWhatsApp();
 
   if (!product) {
@@ -41,18 +40,6 @@ const ProductDetail = () => {
     { id: "specifications", label: "Specifications", icon: FaCheck },
     { id: "safety", label: "Safety Information", icon: FaShieldAlt },
   ];
-
-  const handleOrder = () => {
-    setIsLoading(true);
-    // Small delay to show loading state before redirect
-    setTimeout(() => {
-      sendWhatsAppMessage(product);
-      // Reset loading state after redirect
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1000);
-    }, 300);
-  };
 
   return (
     <div className="container-custom section-padding overflow-x-hidden">
@@ -88,7 +75,7 @@ const ProductDetail = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          {/* Thumbnail Images - Fixed for mobile */}
+          {/* Thumbnail Images */}
           <div className="flex gap-3 mt-4 overflow-x-auto pb-2">
             {product.images.slice(0, 4).map((image, index) => (
               <div
@@ -169,47 +156,14 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          {/* CTA Buttons - Updated with loading state */}
+          {/* CTA Buttons - Clean, no loading state */}
           <div className="flex flex-col sm:flex-row gap-4">
             <button
-              onClick={handleOrder}
-              disabled={isLoading}
-              className={`w-full sm:flex-1 flex items-center justify-center gap-3 px-6 sm:px-8 py-4 rounded-xl font-semibold transition-colors text-base sm:text-lg ${
-                isLoading
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-green-500 hover:bg-green-600 text-white"
-              }`}
+              onClick={() => sendWhatsAppMessage(product)}
+              className="w-full sm:flex-1 flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-4 rounded-xl font-semibold transition-colors text-base sm:text-lg hover:scale-[1.02] active:scale-[0.98]"
             >
-              {isLoading ? (
-                <>
-                  <svg
-                    className="animate-spin h-5 w-5 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                  Opening WhatsApp...
-                </>
-              ) : (
-                <>
-                  <FaWhatsapp size={20} />
-                  Order Now
-                </>
-              )}
+              <FaWhatsapp size={20} />
+              Order Now
             </button>
           </div>
 
@@ -221,7 +175,7 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      {/* Tabs Section - Fixed for mobile */}
+      {/* Tabs Section */}
       <div className="mt-16 overflow-x-hidden">
         <div className="flex border-b border-border-light overflow-x-auto whitespace-nowrap">
           {tabs.map((tab) => {
