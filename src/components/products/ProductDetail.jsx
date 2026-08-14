@@ -135,11 +135,11 @@ const ProductDetail = () => {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
             <button
-              onClick={() => sendWhatsAppMessage(product.name)}
+              onClick={() => sendWhatsAppMessage(product)}
               className="flex-1 flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-colors text-lg"
             >
               <FaWhatsapp size={24} />
-              Make Inquiry
+              Order Now
             </button>
             <button className="flex-1 bg-primary-700 hover:bg-primary-800 text-white px-8 py-4 rounded-xl font-semibold transition-colors text-lg">
               Request Information
@@ -262,7 +262,7 @@ const ProductDetail = () => {
       </div>
 
       {/* Floating WhatsApp Button */}
-      <WhatsAppButton variant="floating" productName={product.name} />
+      <WhatsAppButton variant="floating" product={product} />
     </div>
   );
 };

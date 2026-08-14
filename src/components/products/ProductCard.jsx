@@ -54,12 +54,12 @@ const ProductCard = ({ product }) => {
           View Details
         </Link>
         <button
-          onClick={() => sendWhatsAppMessage(product.name)}
+          onClick={() => sendWhatsAppMessage(product)}
           className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm"
-          aria-label="Inquire on WhatsApp"
+          aria-label="Order on WhatsApp"
         >
           <FaWhatsapp size={16} />
-          Inquire
+          Order Now
         </button>
       </CardFooter>
     </Card>

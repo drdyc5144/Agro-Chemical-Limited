@@ -3,34 +3,34 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from "../utils/constants";
 
 /**
  * Custom hook for WhatsApp functionality
- * @param {string} defaultProductName - Optional default product name for inquiry
+ * @param {Object} defaultProduct - Optional default product for inquiry
  * @returns {Object} { sendWhatsAppMessage, getWhatsAppLink }
  */
-export const useWhatsApp = (defaultProductName = "") => {
+export const useWhatsApp = (defaultProduct = null) => {
   /**
    * Send a WhatsApp message
-   * @param {string} productName - Optional product name for the inquiry
+   * @param {Object} product - Product object with details
    */
   const sendWhatsAppMessage = useCallback(
-    (productName = defaultProductName) => {
-      const message = encodeURIComponent(WHATSAPP_MESSAGE(productName));
+    (product = defaultProduct) => {
+      const message = encodeURIComponent(WHATSAPP_MESSAGE(product));
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
       window.open(url, "_blank");
     },
-    [defaultProductName],
+    [defaultProduct],
   );
 
   /**
    * Get the WhatsApp link without opening it
-   * @param {string} productName - Optional product name for the inquiry
+   * @param {Object} product - Product object with details
    * @returns {string} WhatsApp URL
    */
   const getWhatsAppLink = useCallback(
-    (productName = defaultProductName) => {
-      const message = encodeURIComponent(WHATSAPP_MESSAGE(productName));
+    (product = defaultProduct) => {
+      const message = encodeURIComponent(WHATSAPP_MESSAGE(product));
       return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
     },
-    [defaultProductName],
+    [defaultProduct],
   );
 
   return {

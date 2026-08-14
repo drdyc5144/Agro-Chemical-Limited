@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
-import Container from "../ui/Container"; // ← Correct import
+import Container from "../ui/Container";
 import Button from "../ui/Button";
 import useWhatsApp from "../../hooks/useWhatsApp";
 
